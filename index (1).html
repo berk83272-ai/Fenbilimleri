@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>7. Sınıf Fen Kampüsü</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    :root {
+      --bg: #f9faff; --card-bg: #ffffff; --text: #1a1a2e;
+      --primary: #6a5acd; --primary-dark: #483d8b; --accent: #ba55d3;
+      --gray: #6c757d; --border: #d4c4fb;
+    }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.75; margin: 0; padding: 0; }
+    
+    header { 
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); 
+      color: white; padding: 4rem 1rem 5rem; text-align: center; position: relative; overflow: hidden; 
+    }
+    header::before { 
+      content: ""; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; 
+      background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 60%); 
+      animation: rotate 30s linear infinite; 
+    }
+    @keyframes rotate { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+    h1 { font-size: clamp(2.6rem, 8vw, 4.5rem); margin-bottom: 0.8rem; }
+    .subtitle { font-size: 1.35rem; opacity: 0.95; }
+
+    .container { max-width: 1250px; margin: 0 auto; padding: 0 1rem; }
+
+    .unit-section { margin-bottom: 3rem; }
+    .unit-header {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: white;
+      padding: 1.5rem 2rem;
+      border-radius: 14px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.4rem;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+    .unit-header:hover { transform: translateY(-4px); box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
+    .unit-header i { transition: transform 0.4s; }
+    .unit-header.active i { transform: rotate(180deg); }
+
+    .unit-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.7s ease, padding 0.5s ease;
+      background: white;
+      border: 1px solid var(--border);
+      border-top: none;
+      border-radius: 0 0 14px 14px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+    .unit-content.open {
+      max-height: 4000px;
+      padding: 2rem;
+    }
+
+    .unit-subtitle { font-size: 1.2rem; color: #444; margin-bottom: 1.5rem; font-style: italic; }
+    .highlight { color: #e63939; font-weight: bold; }
+    img { max-width: 100%; border-radius: 14px; margin: 18px 0; box-shadow: 0 8px 20px rgba(0,0,0,0.12); }
+
+    footer { text-align: center; padding: 3rem 1rem; color: var(--gray); margin-top: 5rem; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>7. Sınıf Fen Kampüsü</h1>
+</header>
+
+<div class="container">
+
+  <!-- 1. Ünite - Çok Detaylı -->
+  <div class="unit-section">
+    <div class="unit-header" onclick="toggleContent(this)">
+      <span>1. Güneş Sistemi ve Ötesi</span>
+      <i class="fas fa-chevron-down"></i>
+    </div>
+    <div class="unit-content">
+      <p class="unit-subtitle">Uzay araştırmaları, teleskoplar, uydular ve yıldızların yaşam döngüsü hakkında kapsamlı bilgiler.</p>
+      
+      <p>Güneş Sistemi, <span class="highlight">Güneş</span> etrafında dönen 8 gezegenden oluşur. Bunlar Merkür, Venüs, Dünya, Mars (iç gezegenler - kayaç yapılı) ve Jüpiter, Satürn, Uranüs, Neptün (dış gezegenler - gaz devleri) olarak ikiye ayrılır. Ayrıca birçok uydu, asteroid kuşağı ve kuyruklu yıldız da sistemin parçasıdır.</p>
+      
+      <img src="https://images.unsplash.com/photo-1447433589675-4aaa569f3e05?w=800" alt="Güneş Sistemi">
+      
+      <p>Uzay araştırmalarında teleskoplar çok önemlidir. <span class="highlight">Hubble Uzay Teleskobu</span> uzun yıllar boyunca evrenin derinliklerini görüntüledi. Günümüzde ise <span class="highlight">James Webb Uzay Teleskobu</span> çok daha güçlü sensörleriyle ilk galaksileri ve yıldız oluşumlarını gözlemlemektedir. Türkiye'de TÜBİTAK Uzay Teknolojileri Araştırma Enstitüsü tarafından geliştirilen <span class="highlight">İMECE uydusu</span> yeryüzü gözlemi ve haberleşme için kullanılmaktadır.</p>
+      
+      <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=800" alt="James Webb">
+      
+      <p>Yıldızlar <span class="highlight">bulutsu</span> denilen gaz ve toz bulutlarından doğar. Küçük kütleli yıldızlar kırmızı dev olup beyaz cüceye dönüşürken, büyük kütleli yıldızlar <span class="highlight">süpernova</span> patlaması ile sona erer ve nötron yıldızı veya kara delik bırakabilir. Galaksimiz <span class="highlight">Samanyolu</span>, milyarlarca yıldızdan oluşan dev bir yapıdır. Işık yılı, ışığın bir yılda aldığı mesafedir ve evrenin büyüklüğünü anlamamızı sağlar.</p>
+      
+      <p>Uzay kirliliği günümüzde büyük bir sorundur. Atık uydular, roket parçaları ve ışık kirliliği gök gözlemlerini zorlaştırmaktadır. Bu nedenle uluslararası anlaşmalarla uzaydaki atıkların azaltılması hedeflenmektedir.</p>
+    </div>
+  </div>
+
+  <!-- 2. Ünite - Detaylı -->
+  <div class="unit-section">
+    <div class="unit-header" onclick="toggleContent(this)">
+      <span>2. Hücre ve Bölünmeler</span>
+      <i class="fas fa-chevron-down"></i>
+    </div>
+    <div class="unit-content">
+      <p class="unit-subtitle">Canlıların en küçük yapı taşı olan hücre ve bölünme süreçleri.</p>
+      
+      <p>Hücre, tüm canlıların temel yapı birimidir. <span class="highlight">Hayvan hücresi</span> ile <span class="highlight">bitki hücresi</span> arasında önemli farklar vardır. Bitki hücrelerinde kloroplast (fotosentez için), büyük merkezi koful ve selüloz hücre duvarı bulunurken, hayvan hücrelerinde bunlar yoktur. Her iki hücrede de ortak olarak çekirdek, sitoplazma, hücre zarı, mitokondri ve ribozom bulunur.</p>
+      
+      <img src="https://images.unsplash.com/photo-1532187869886-1d553b3b9631?w=800" alt="Hayvan ve Bitki Hücresi">
+      
+      <p><span class="highlight">Mitoz bölünme</span>, vücut hücrelerinde gerçekleşir ve büyüme, onarım, yaraların iyileşmesi için gereklidir. Mitoz sonunda ana hücre ile aynı sayıda kromozomlu iki yavru hücre oluşur. <span class="highlight">Mayoz bölünme</span> ise üreme hücrelerinde (sperm ve yumurta) gerçekleşir. Mayoz sonucunda kromozom sayısı yarıya iner ve genetik çeşitlilik sağlanır. Bu çeşitlilik canlıların evriminde çok önemlidir.</p>
+      
+      <p>Hücreden doku, dokudan organ, organdan sistem ve sistemlerden organizma oluşur. Bu hiyerarşi canlıların karmaşık yapısını açıklar.</p>
+    </div>
+  </div>
+
+  <!-- 3. Ünite -->
+  <div class="unit-section">
+    <div class="unit-header" onclick="toggleContent(this)">
+      <span>3. Kuvvet ve Enerji</span>
+      <i class="fas fa-chevron-down"></i>
+    </div>
+    <div class="unit-content">
+      <p class="unit-subtitle">Kuvvetin etkileri, iş ve enerji dönüşümleri.</p>
+      
+      <p>Kuvvet, cismin hareket durumunu, yönünü veya şeklini değiştiren etkidir. <span class="highlight">Yer çekimi kuvveti</span>, <span class="highlight">sürtünme kuvveti</span>, manyetik kuvvet ve elektrik kuvveti günlük hayatta karşılaştığımız kuvvet türlerindendir.</p>
+      
+      <p><span class="highlight">İş</span>, kuvvetin uygulandığı cismin hareket yönünde yer değiştirmesiyle yapılır. Formülü: İş = Kuvvet × Yer Değiştirme. Birimi joule’dür.</p>
+      
+      <img src="https://images.unsplash.com/photo-1581092160560-1c1e428e9d65?w=800" alt="Enerji Dönüşümü">
+      
+      <p><span class="highlight">Kinetik enerji</span> hareket halindeki cismin enerjisidir. <span class="highlight">Potansiyel enerji</span> ise cismin konumundan veya şekil değiştirmesinden kaynaklanır (çekim potansiyel enerjisi, esneklik potansiyel enerjisi). Enerji bir türden diğerine dönüşür ancak toplam enerji korunur. Sarkaç hareketi, serbest düşme ve eğik düzlem bu dönüşüme güzel örneklerdir.</p>
+    </div>
+  </div>
+
+  <!-- 4. Ünite -->
+  <div class="unit-section">
+    <div class="unit-header" onclick="toggleContent(this)">
+      <span>4. Saf Madde ve Karışımlar</span>
+      <i class="fas fa-chevron-down"></i>
+    </div>
+    <div class="unit-content">
+      <p class="unit-subtitle">Maddenin tanecikli yapısı ve ayrıştırma yöntemleri.</p>
+      
+      <p>Madde <span class="highlight">atomlardan</span> oluşur. Atomun çekirdeğinde proton ve nötron, etrafında elektronlar bulunur. Saf maddeler iki gruba ayrılır: <span class="highlight">Element</span> (tek tür atom) ve <span class="highlight">Bileşik</span> (farklı atomların belirli oranda birleşmesi).</p>
+      
+      <p>Karışımlar ise homojen (tek fazlı, çözelti) ve heterojen (çok fazlı) olarak sınıflandırılır. Çözünme hızını etkileyen faktörler: <span class="highlight">sıcaklık artışı</span>, karıştırma ve yüzey alanının büyümesidir.</p>
+      
+      <img src="https://images.unsplash.com/photo-1606857521015-7f9fcf423740?w=800" alt="Atom ve Karışım">
+      
+      <p>Karışımları ayırma yöntemleri: süzme (katı-sıvı), buharlaştırma, damıtma (kaynama noktası farkı), manyetik ayırma ve yoğunluk farkından yararlanma.</p>
+    </div>
+  </div>
+
+  <!-- 5. Ünite -->
+  <div class="unit-section">
+    <div class="unit-header" onclick="toggleContent(this)">
+      <span>5. Işığın Madde ile Etkileşimi</span>
+      <i class="fas fa-chevron-down"></i>
+    </div>
+    <div class="unit-content">
+      <p class="unit-subtitle">Işığın yansıması, kırılması ve merceklerin kullanımı.</p>
+      
+      <p>Işık düz bir çizgi boyunca yayılır. Işık bir ortamdan başka bir ortama geçerken <span class="highlight">kırılır</span>. Kırılma olayı, ışığın yoğunluğu farklı ortamlarda farklı hızlarda hareket etmesinden kaynaklanır. Örneğin su içerisindeki kalem kırık görünür.</p>
+      
+      <img src="https://images.unsplash.com/photo-1617791160505-6f00504e3519?w=800" alt="Işık Kırılması">
+      
+      <p>Mercekler ışığı kırarak görüntü oluşturur. <span class="highlight">İnce kenarlı mercek</span> (konveks) yakınlaştırır ve büyüteç, teleskopta kullanılır. <span class="highlight">Kalın kenarlı mercek</span> (konkav) uzaklaştırır ve miyop gözlüklerinde tercih edilir.</p>
+    </div>
+  </div>
+
+  <!-- 6. Ünite -->
+  <div class="unit-section">
+    <div class="unit-header" onclick="toggleContent(this)">
+      <span>6. Canlılarda Üreme, Büyüme ve Gelişme</span>
+      <i class="fas fa-chevron-down"></i>
+    </div>
+    <div class="unit-content">
+      <p class="unit-subtitle">Üreme türleri ve gelişim süreçleri.</p>
+      
+      <p>Canlılar <span class="highlight">eşeysiz üreme</span> (bölünme, tomurcuklanma, vejetatif üreme) ve <span class="highlight">eşeyli üreme</span> (döllenme) yapabilir. Bitkilerde tohumla, hayvanlarda iç veya dış döllenmeyle üreme görülür.</p>
+      
+      <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800" alt="Üreme">
+      
+      <p>Büyüme hücre sayısının artmasıyla, gelişme ise organların olgunlaşması ve fonksiyon kazanmasıyla gerçekleşir. Hormonlar (büyüme hormonu, östrojen, testosteron) bu süreçleri düzenler.</p>
+    </div>
+  </div>
+
+  <!-- 7. Ünite -->
+  <div class="unit-section">
+    <div class="unit-header" onclick="toggleContent(this)">
+      <span>7. Elektrik Devreleri</span>
+      <i class="fas fa-chevron-down"></i>
+    </div>
+    <div class="unit-content">
+      <p class="unit-subtitle">Elektrik akımı, devre türleri ve güvenlik önlemleri.</p>
+      
+      <p>Elektrik akımı, elektronların iletken maddelerdeki düzenli hareketidir. Devre elemanları: <span class="highlight">pil</span> (gerilim kaynağı), lamba (tüketici), anahtar ve teller.</p>
+      
+      <img src="https://images.unsplash.com/photo-1581092160560-1c1e428e9d65?w=800" alt="Elektrik Devresi">
+      
+      <p><span class="highlight">Seri devre</span>de akım her noktada aynıdır, gerilim bölünür. <span class="highlight">Paralel devre</span>de gerilim aynıdır, akım dallara ayrılır. <span class="highlight">Ohm Kanunu</span> (V = I × R) elektrik devrelerinin temelidir. Güvenlik için sigorta ve topraklama çok önemlidir.</p>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 7. Sınıf Fen Kampüsü • MEB Müfredatı</p>
+</footer>
+
+<script>
+function toggleContent(header) {
+  const content = header.nextElementSibling;
+  const isOpen = content.classList.contains('open');
+
+  document.querySelectorAll('.unit-content').forEach(c => c.classList.remove('open'));
+  document.querySelectorAll('.unit-header').forEach(h => h.classList.remove('active'));
+
+  if (!isOpen) {
+    content.classList.add('open');
+    header.classList.add('active');
+  }
+}
+</script>
+</body>
+             </html>
